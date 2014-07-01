@@ -1,0 +1,24 @@
+#cmakedefine VERBOSE
+
+typedef struct _config_item {
+    int temp_min;
+    int temp_max;
+    int value;
+    int sleep;
+} config_item;
+
+config_item config[] = {
+    {0, 55, 0},
+    {52, 60, 1},
+    {57, 999, 2}
+};
+
+#define GET_TEMP		_IOR ('i', 0x84, size_t)
+#define READ_FAN		_IOWR('i', 0x86, size_t)
+#define WRITE_FAN		_IOWR('i', 0x87, size_t)
+#define SECOND_FAN		1
+#define FIRST_FAN		0
+
+#define PROC_FILE		"/proc/i8k"
+
+#define RESET_CONFIG_ITEM_IDX 1
