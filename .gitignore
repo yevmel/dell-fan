@@ -1,0 +1,7 @@
+.gitignore
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+dell-fan
+sources/config.h
