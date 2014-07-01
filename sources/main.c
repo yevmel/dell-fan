@@ -86,6 +86,7 @@ int main(int argc, char **argv) {
 
         set_fan(FIRST_FAN, current_config_item->value);
 
+        fprintf(stdout, "sleeping for %d.\n", current_config_item->sleep);
         sleep(current_config_item->sleep);
     }
 
